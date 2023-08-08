@@ -37,7 +37,7 @@ touch /etc/v2ray/scdomain
 
 
   clear
-fi
+
 
 
 secs_to_human() {
