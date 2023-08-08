@@ -24,7 +24,7 @@ hst=( `hostname` )
 dart=$(cat /etc/hosts | grep -w `hostname` | awk '{print $2}')
 if [[ "$hst" != "$dart" ]]; then
 echo "$localip $(hostname)" >> /etc/hosts
-fi
+
 
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
@@ -38,22 +38,6 @@ touch /etc/v2ray/scdomain
 
   clear
 
-
-
-secs_to_human() {
-    echo "Installation time : $(( ${1} / 3600 )) hours $(( (${1} / 60) % 60 )) minute's $(( ${1} % 60 )) seconds"
-}
-start=$(date +%s)
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
-sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
-
-echo -e "[ ${green}INFO${NC} ] Preparing the install file"
-apt install git curl -y >/dev/null 2>&1
-apt install python -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
-sleep 0.5
-echo -ne "[ ${green}INFO${NC} ] Check permission : "
 
 
 
