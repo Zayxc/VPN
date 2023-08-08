@@ -41,10 +41,7 @@ touch /etc/v2ray/scdomain
 
 
 
-mkdir -p /var/lib/ >/dev/null 2>&1
-echo "IP=" >> /var/lib/ipvps.conf
 
-echo ""
 #wget -q https://raw.githubusercontent.com/Zayxc/VPN/aio/tools.sh;chmod +x tools.sh;./tools.sh
 #rm tools.sh
 clear
